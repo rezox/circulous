@@ -41,13 +41,8 @@ function check_extension($email, $extension = 'edu')
    return true;
 }
 
-function send_email_verification($email)
-{
-
-}
-
 function generate_token($email)
 {
-
+   return md5(date('WY') . $email); 
 }
 ?>
