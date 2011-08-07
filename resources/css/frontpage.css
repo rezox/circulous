@@ -1,15 +1,10 @@
 @font-face {
-   font-family: Noteworthy;
-   src: url('/resources/fonts/noteworthy.ttf');
-}
-
-@font-face {
    font-family: Helvetica Neue Light;
    src: url('/resources/fonts/HelveticaNeue-Light.ttf');
 }
 
 body { 
-   background: #cbcbcb url(/resources/images/bg-new.png) repeat-x; 
+   background: #cbcbcb url(/resources/images/bg.png) repeat-x; 
    font-family: Lucida Grande, Helvetica Neue Light; 
    font-size: 13px; 
    line-height: 18px; 
