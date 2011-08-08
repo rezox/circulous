@@ -1,7 +1,7 @@
 .phrase
 {
    color: #000; text-shadow: 0 1px 1px #fff;
-   font-family: Helvetica Neue Light; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
+   font-family: Helvetica Neue; font-weight: Light; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
 }
 
 form {
@@ -12,7 +12,7 @@ form {
 
 input 
 {
-   font: normal 18px/100% Helvetica;
+   font: normal 18px/100% Lucida Grande;
    letter-spacing: 0.1em;
    background: rgba(255, 255, 255, 0.9);
    background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
