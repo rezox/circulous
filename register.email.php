@@ -2,29 +2,7 @@
 include_once('include/config.php');
 include_once('register.helpers.php');
 
-function send_email_verification($email)
-{
-   include 'include/classes/class.phpmailer.php';
-   $mail = new PHPMailer();
-   
-   $mail->From = "noreply@circulo.us";
-   $mail->FromName = "Circulo.us";
 
-   $mail->Subject = "Email Verification";
-   
-   $body = "Circulo.us - a new way to look for textbooks.\n";
-   $body .= "Thanks for your interest in circulo.us!\n";
-   $body .= "\n";
-   $body .= "In order to continue creating your account,\n";
-   $body .= "we need to verify that you're email works.\n";
-   $body .= "\n";
-   $body .= "To do so, please visit the following link.\n";
-   $body .= "http://circulo.us/register.php?email=" . $email . "&code=" . generate_token($email);
-
-   $mail->Body = $body;
-   $mail->AddAddress($email, $email);
-   $mail->Send();
-}
 
 $email = $_POST['email'];
 
@@ -45,18 +23,28 @@ else if (!check_extension($email))
    $response['type'] = 'error';
    $response['message'] = "Sorry, this service is only available to .edu addresses.";
 }
-else if (check_exists($email))
-{
-	$response['type'] = 'error';
-	$response['message'] = "This email account has already been registered!";
-}
 else
-{
-   $response['type'] = 'success';
-   $response['message'] = 'Last thing, I swear! Type in a password to continue.';
-	$response['email'] = $email;
-
-   // send_email_verification($email);
+{	
+	$exists = check_exists($email);
+	
+	if ($exists == 1)
+	{
+		$response['type'] = 'error';
+		$response['message'] = "This email account has already been registered!";
+	}
+	else if ($exists == 2)
+	{
+		$response['type'] = 'error';
+		$response['message'] = "We've sent a verification email already, we resent just incase.";
+		
+		send_email_verification($email);
+	}
+	else
+	{
+		$response['type'] = 'success';
+	   $response['message'] = 'Last thing, I swear! Type in a password to continue.';
+		$response['email'] = $email;
+	}
 }
 
 echo json_encode($response);

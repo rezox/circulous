@@ -28,7 +28,7 @@ function processEmail(response)
 		$('#form').fadeTo('normal', 0, function()
 		{
 			$('#message').fadeTo('normal', 1);
-			$('#form').html('<form id="register" class="form" action="register.create.php" method="post"><input type="hidden" name="email" value="'+response.email+'" /><input type="password" id="pw" style="width: 165px;" /> <input type="password" id="confirm" style="width: 165px;" /> <button type="submit" class="button"></button></form>').fadeTo('normal', 1);
+			$('#form').html('<form id="register" class="form" action="register.create.php" method="post"><input type="hidden" name="email" value="'+response.email+'" /><input type="password" id="pw" name="pw" style="width: 165px;" /> <input type="password" id="confirm" name="confirm" style="width: 165px;" /> <button type="submit" class="button"></button></form>').fadeTo('normal', 1);
 		
 			$(this).ready(function() {
 				$("#pw").watermark("password");
@@ -83,5 +83,7 @@ function validatePassword(formData, jqForm, options)
 
 function processPassword(response)
 {
-
+	changeMessage(response.type, response.message);
+	if (response.type == 'success') $('#form').slideUp('normal');
+	$('#message').fadeTo('normal', 1);
 }

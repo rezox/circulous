@@ -12,4 +12,5 @@ body {
 	text-shadow: 0 1px 1px #fff;
    text-rendering: optimizeLegibility; 
    -webkit-font-smoothing: antialiased;
+	padding-bottom: 150px;
 }
