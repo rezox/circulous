@@ -1,61 +1,18 @@
 <?php
+include_once('include/header.php');
 include_once('register.helpers.php');
-include_once('include/config.php');
-?>
 
-<?php function show_registration($email) { ?>
-<iframe src="https://www.facebook.com/plugins/registration.php?
-             client_id=<?= FACEBOOK_APP_ID ?>&
-             redirect_uri=<?= urlencode('http://circulo.us/register.create.php?email=' . $email) ?>&
-             fields=name&fb_only=true"
-        scrolling="auto"
-        frameborder="no"
-        style="border:none"
-        allowTransparency="true"
-        width="600"
-        height="330">
-</iframe>
-<?php } ?>
+//$_POST vars, pw, confirm, email
+//can assume that password is valid
 
-<?php
-function parse_signed_request($signed_request, $secret) {
-   list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
+$response = array('type' => '', 'message' => '');
 
-   // decode the data
-   $sig = base64_url_decode($encoded_sig);
-   $data = json_decode(base64_url_decode($payload), true);
+//TODO: Store into database.
+//TODO: Write any responses that are bad to output.
 
-   if (strtoupper($data['algorithm']) !== 'HMAC-SHA256') {
-      error_log('Unknown algorithm. Expected HMAC-SHA256');
-      return null;
-   }
+$response['type'] = 'success';
+$response['message'] = 'All good to go! Check your email for the verification link!';
 
-   // check sig
-   $expected_sig = hash_hmac('sha256', $payload, $secret, $raw = true);
-   if ($sig !== $expected_sig) {
-      error_log('Bad Signed JSON signature!');
-      return null;
-   }
+echo json_encode($response);
 
-   return $data;
-}
-
-function base64_url_decode($input) {
-    return base64_decode(strtr($input, '-_', '+/'));
-}
-?>
-
-<link rel="stylesheet" href="resources/css/frontpage.css" type="text/css" />
-
-<?php
-if (basename(__FILE__) == basename( $_SERVER['PHP_SELF']))
-{
-   if ($_REQUEST) $response = parse_signed_request($_REQUEST['signed_request'], FACEBOOK_SECRET);
-   else die();   
-
-   if (!isset($_GET['email'])) die();
-
-   db_query('INSERT INTO users (uid, name, email) VALUES ("%s", "%s", "%s")', $response['user_id'], $response['registration']['name'], $_GET['email']);
-}
-else show_registration($_GET['email']);
 ?>

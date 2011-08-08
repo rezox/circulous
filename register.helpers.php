@@ -45,4 +45,11 @@ function generate_token($email)
 {
    return md5(date('WY') . $email); 
 }
+
+function check_exists($email)
+{
+	$result = db_query("SELECT * FROM users WHERE email='%s'", $email);
+	if (count($result) > 0) return true;
+	return false;
+}
 ?>

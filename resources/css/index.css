@@ -1,0 +1,56 @@
+.phrase
+{
+   color: #000; text-shadow: 0 1px 1px #fff;
+   font-family: Helvetica Neue Light; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
+}
+
+form {
+   border: 0px;
+   padding:20px;
+   width:560px;
+}
+
+input 
+{
+   font: normal 18px/100% Helvetica;
+   letter-spacing: 0.1em;
+   background: rgba(255, 255, 255, 0.9);
+   background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
+   background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+   border:1px solid #aaa;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+   -moz-box-shadow:0 0 3px #aaa;
+   -webkit-box-shadow:0 0 3px #aaa;
+   padding:7px;
+}
+
+input:focus {
+   border-color:#093c75;
+   -moz-box-shadow:0 0 3px #0459b7;
+   -webkit-box-shadow:0 0 3px #0459b7;
+   outline:none;
+}
+
+.button {
+   background: url(/resources/images/register-button.png) 0 0;
+   padding: 13px 54px 11px 54px;
+   border: 0px;
+}
+
+.button:hover {
+   background: url(/resources/images/register-button.png) 0 74px;
+}
+
+.button:active, .button:focus {
+   background: url(/resources/images/register-button.png) 0 37px;
+}
+
+.infobox
+{
+   color: #000;
+   width: 350px;
+   font: 13px Lucida Grande; letter-spacing: 0.05em;
+   text-shadow: 0 1px 1px #fff;
+   line-height: 18px;
+}

@@ -1,4 +1,5 @@
 <?php
+include_once('include/config.php');
 include_once('register.helpers.php');
 
 function send_email_verification($email)
@@ -18,7 +19,7 @@ function send_email_verification($email)
    $body .= "we need to verify that you're email works.\n";
    $body .= "\n";
    $body .= "To do so, please visit the following link.\n";
-   $body .= "http://circulo.us/register.verify.php?email=" . $email . "&code=" . generate_token($email);
+   $body .= "http://circulo.us/register.php?email=" . $email . "&code=" . generate_token($email);
 
    $mail->Body = $body;
    $mail->AddAddress($email, $email);
@@ -27,7 +28,7 @@ function send_email_verification($email)
 
 $email = $_POST['email'];
 
-$response = array('type' => '', message => '');
+$response = array('type' => '', 'message' => '', 'email' => '');
 
 if (!check_email($email))
 {
@@ -44,12 +45,18 @@ else if (!check_extension($email))
    $response['type'] = 'error';
    $response['message'] = "Sorry, this service is only available to .edu addresses.";
 }
+else if (check_exists($email))
+{
+	$response['type'] = 'error';
+	$response['message'] = "This email account has already been registered!";
+}
 else
 {
    $response['type'] = 'success';
-   $response['message'] = 'All good to go! Now go check your email for the next steps!';
+   $response['message'] = 'Last thing, I swear! Type in a password to continue.';
+	$response['email'] = $email;
 
-   send_email_verification($email);
+   // send_email_verification($email);
 }
 
 echo json_encode($response);
