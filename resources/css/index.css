@@ -10,7 +10,7 @@ form {
    width:560px;
 }
 
-input 
+#email 
 {
    font: normal 18px/100% Lucida Grande;
    letter-spacing: 0.1em;
@@ -22,10 +22,10 @@ input
    -webkit-border-radius:3px;
    -moz-box-shadow:0 0 3px #aaa;
    -webkit-box-shadow:0 0 3px #aaa;
-   padding:7px;
+   padding:7px 10px 8px 10px;
 }
 
-input:focus {
+#email:focus {
    border-color:#093c75;
    -moz-box-shadow:0 0 3px #0459b7;
    -webkit-box-shadow:0 0 3px #0459b7;
@@ -33,17 +33,17 @@ input:focus {
 }
 
 .button {
-   background: url(/resources/images/register-button.png) 0 0;
+   background: url(/resources/images/register-button.png) no-repeat 0 0;
    padding: 13px 54px 11px 54px;
    border: 0px;
 }
 
 .button:hover {
-   background: url(/resources/images/register-button.png) 0 74px;
+   background-position: 0 -37px;
 }
 
 .button:active, .button:focus {
-   background: url(/resources/images/register-button.png) 0 37px;
+   background-position: 0 -74px;
 }
 
 .infobox
