@@ -12,4 +12,5 @@ define('BLOWFISH_SECRET', '4rehAJasaPrafrU2a4e4wapraS89CRa6');
 include 'database.php';
 db_connect();
 
+ini_set('display_errors', 'Off');
 ?>
