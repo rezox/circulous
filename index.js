@@ -55,6 +55,14 @@ function validateEmail(formData, jqForm, options)
 		$('#message').fadeTo('normal', 1);
 		return false;
 	}
+
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (!filter.test(form.email.value)) 
+	{
+		changeMessage('error', "The email address you entered isn't valid.");
+		$('#message').fadeTo('normal', 1);
+		return false;
+	}
 	
 	return true;
 }
