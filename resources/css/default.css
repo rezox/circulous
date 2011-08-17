@@ -1,31 +1,31 @@
 @font-face {
    font-family: Helvetica Neue;
-   src: url('/resources/fonts/HelveticaNeue.otf');
-   src: local("Helvetica Neue"), url('/resources/fonts/HelveticaNeue.otf') format ("opentype");
+   src: url('../fonts/HelveticaNeue.otf');
+   src: local("Helvetica Neue"), url('../fonts/HelveticaNeue.otf') format ("opentype");
 }
 
 @font-face {
    font-family: Helvetica Neue;
    font-weight: Light;
-   src: url('/resources/fonts/HelveticaNeue-Light.otf');
-   src: local("Helvetica Neue"), url('/resources/fonts/HelveticaNeue-Light.otf') format ("opentype");
+   src: url('../fonts/HelveticaNeue-Light.otf');
+   src: local("Helvetica Neue"), url('../fonts/HelveticaNeue-Light.otf') format ("opentype");
 }
 
 @font-face {
    font-family: Lucida Grande;
-   src: url('/resources/fonts/LucidaGrande.otf');
-   src: local("Lucida Grande"), url('/resources/fonts/LucidaGrande.otf') format ("opentype");
+   src: url('../fonts/LucidaGrande.otf');
+   src: local("Lucida Grande"), url('../fonts/LucidaGrande.otf') format ("opentype");
 }
 
 @font-face {
    font-family: Lucida Grande;
    font-weight: bold;
-   src: url('/resources/fonts/LucidaGrande-Bold.otf');
-   src: local("Lucida Grande"), url('/resources/fonts/LucidaGrande-Bold.otf') format ("opentype");
+   src: url('../fonts/LucidaGrande-Bold.otf');
+   src: local("Lucida Grande"), url('../fonts/LucidaGrande-Bold.otf') format ("opentype");
 }
 
 html, body { 
-   background: #cbcbcb url(/resources/images/bg.png) repeat-x; 
+   background: #cbcbcb url(../images/bg.png) repeat-x; 
 	height: 100%;
 	min-width: 800px;
 

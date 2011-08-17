@@ -33,7 +33,7 @@ input:focus {
 }
 
 .button {
-   background: url(/resources/images/register-button.png) no-repeat 0 0;
+   background: url(../images/register-button.png) no-repeat 0 0;
    padding: 13px 54px 11px 54px;
    border: 0px;
 }

@@ -77,7 +77,7 @@ DATE CREATED: 28-06-2010 1642 GMT +05:30
 }
 
 .notification.success p {
-	background: transparent url('/resources/images/notifications/tick.png') no-repeat scroll 14px 1px;
+	background: transparent url('../images/notifications/tick.png') no-repeat scroll 14px 1px;
 }
 
 .notification.success p strong {
@@ -114,7 +114,7 @@ DATE CREATED: 28-06-2010 1642 GMT +05:30
 }
 
 .notification.error p {
-	background: transparent url('/resources/images/notifications/cross.png') no-repeat scroll 14px 1px;
+	background: transparent url('../images/notifications/cross.png') no-repeat scroll 14px 1px;
 }
 
 .notification.error p strong {
@@ -151,7 +151,7 @@ DATE CREATED: 28-06-2010 1642 GMT +05:30
 }
 
 .notification.warning p {
-	background: transparent url('/resources/images/notifications/exclamation.png') no-repeat scroll 14px 1px;
+	background: transparent url('../images/notifications/exclamation.png') no-repeat scroll 14px 1px;
 }
 
 .notification.warning p strong {
@@ -192,7 +192,7 @@ DATE CREATED: 28-06-2010 1642 GMT +05:30
 }
 
 .notification.tip p {
-	background: transparent url('/resources/images/notifications/tip.png') no-repeat scroll 14px 1px;
+	background: transparent url('../images/notifications/tip.png') no-repeat scroll 14px 1px;
 }
 
 /* ----------------------------------------------
@@ -229,5 +229,5 @@ DATE CREATED: 28-06-2010 1642 GMT +05:30
 }
 
 .notification.neutral p {
-	background: transparent url('/resources/images/notifications/neutral.png') no-repeat scroll 14px 1px;
+	background: transparent url('../images/notifications/neutral.png') no-repeat scroll 14px 1px;
 }
