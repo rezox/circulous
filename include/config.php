@@ -1,5 +1,4 @@
 <?php
-echo 'refreshed and kickin';
 define('DB_HOST', '10.194.111.8');
 define('DB_USER', 'user_ab1e97b7');
 define('DB_PASS', '8zRv5Z4sRkhLpu');
