@@ -1,5 +1,5 @@
 <?php include 'include/header.php'; ?>
-
+test
 <div style="margin: 40px auto 0 auto; width: 237px;">
    <img src="resources/images/logo.png" border="0" />
 </div>
