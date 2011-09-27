@@ -1,7 +1,7 @@
 .phrase
 {
    color: #000; text-shadow: 0 1px 1px #fff;
-   font-weight: Light; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
+   font-family: 'Lato'; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
 }
 
 form {
@@ -28,7 +28,7 @@ form {
 {
    color: #000;
    width: 350px;
-   font: 13px Lucida Grande; letter-spacing: 0.05em;
+   font: 13px Helvetica; letter-spacing: 0.07em;
    text-shadow: 0 1px 1px #fff;
    line-height: 18px;
 }

@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+
 html, body { 
    background: #cbcbcb url(../images/bg.png) repeat-x; 
 	height: 95%;
 	min-width: 800px;
 
-   font-family: "Helvetica Neue", Arial, sans-sarif;
+   font-family: Helvetica, Arial, sans-sarif;
    font-size: 13px; line-height: 18px; color: #000; 
 	text-shadow: 0 1px 1px #fff;
    text-rendering: optimizeLegibility; 
@@ -13,7 +15,7 @@ html, body {
 
 input 
 {
-   font: normal 18px/100% Lucida Grande;
+   font: normal 18px/100% Helvetica;
    letter-spacing: 0.1em;
    background: rgba(255, 255, 255, 0.9);
    background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
