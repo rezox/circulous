@@ -21,7 +21,7 @@
 </div>
 
 <div id="form" style="margin: -10px auto 0 auto; width: 520px;"> 
-<form id="emailForm" action="register.email.php" method="post">
+<form id="emailForm" action="email-check.php" method="post">
    <table border="0">
    <tr>
       <td>

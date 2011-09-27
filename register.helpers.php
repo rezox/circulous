@@ -50,7 +50,7 @@ function send_email_verification($email)
    $body .= "we need to verify that you're email works.\n";
    $body .= "\n";
    $body .= "To do so, please visit the following link.\n";
-   $body .= "http://circulo.us/register.php?email=" . $email . "&code=" . generate_token($email);
+   $body .= "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . "/register.verify.php?email=" . $email . "&code=" . generate_token($email);
 
    $mail->IsMail();
    $mail->Body = $body;
