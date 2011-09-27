@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 
 html, body { 
-   background: #cbcbcb url(../images/bg.png) repeat-x; 
+   background: #cbcbcb url(../img/bg.png) repeat-x; 
 	height: 95%;
 	min-width: 800px;
 
