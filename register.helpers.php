@@ -52,7 +52,7 @@ function send_email_verification($email)
    $body .= "To do so, please visit the following link.\n";
    $body .= "http://circulo.us/register.php?email=" . $email . "&code=" . generate_token($email);
 
-   $mail->IsSendmail();
+   $mail->IsMail();
    $mail->Body = $body;
    $mail->AddAddress($email, $email);
    $mail->Send();
