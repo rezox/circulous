@@ -1,5 +1,5 @@
 <?php
-if (isset(getenv('db_hostname')))
+if (isset($_SERVER['db_hostname']))
 {
    define('DB_HOST', getenv('db_hostname'));
    define('DB_USER', getenv('db_username'));
