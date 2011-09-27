@@ -22,8 +22,16 @@
 
 <div id="form" style="margin: -10px auto 0 auto; width: 520px;"> 
 <form id="emailForm" action="register.email.php" method="post">
-   <input type="text" name="email" id="email" style="width: 350px;"/>
-   <button type="submit" class="button"></button>
+   <table border="0">
+   <tr>
+      <td>
+         <input type="text" name="email" id="email" style="width: 350px;"/>
+      </td>
+      <td>
+         <button type="submit" class="button"></button>
+      </td>
+   </tr>
+   </table>
 </form>
 </div>
 
