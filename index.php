@@ -1,5 +1,5 @@
 <?php include 'include/header.php'; ?>
-<div style="margin: 40px auto 0 auto; width: 237px;">
+<div style="margin: 20px auto 0 auto; width: 237px;">
    <img src="resources/images/logo.png" border="0" />
 </div>
 
@@ -35,11 +35,11 @@
 </form>
 </div>
 
-<div style="margin: 0px auto 0 auto; width: 747px; padding-top: 30px;">
+<div style="margin: 0px auto 0 auto; width: 747px; padding-top: 0px;">
    <img src="resources/images/bar.png" border="0" />
 </div>
 
-<div style="margin: -70px auto 0  auto; width: 750px;">
+<div style="margin: -70px auto 0 auto; width: 750px;">
    <div class="infobox" style="position: absolute;">
       <img src="resources/images/mailsr.png" valign="top" style="margin-right: 15px;" /><strong>A simple way to find the books you need.</strong><br />
       <div style="margin: 3px 0 0 32px;">Circulous asks for you .edu email address so it can find people at your school who are also looking to buy and sell. The result? A simple and effective way to match you with someone else on campus for a book exchange. Nice.</div>

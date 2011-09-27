@@ -1,6 +1,6 @@
 html, body { 
    background: #cbcbcb url(../images/bg.png) repeat-x; 
-	height: 100%;
+	height: 95%;
 	min-width: 800px;
 
    font-family: "Helvetica Neue", Arial, sans-sarif;
@@ -11,7 +11,24 @@ html, body {
    margin: 0; padding: 0;
 }
 
-#push
+input 
 {
-	height: 250px;
+   font: normal 18px/100% Lucida Grande;
+   letter-spacing: 0.1em;
+   background: rgba(255, 255, 255, 0.9);
+   background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
+   background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+   border:1px solid #aaa;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+   -moz-box-shadow:0 0 3px #aaa;
+   -webkit-box-shadow:0 0 3px #aaa;
+   padding:8px 10px 8px 10px;
+}
+
+input:focus {
+   border-color:#093c75;
+   -moz-box-shadow:0 0 3px #0459b7;
+   -webkit-box-shadow:0 0 3px #0459b7;
+   outline:none;
 }

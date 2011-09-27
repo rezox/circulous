@@ -10,28 +10,6 @@ form {
    width:560px;
 }
 
-input 
-{
-   font: normal 18px/100% Lucida Grande;
-   letter-spacing: 0.1em;
-   background: rgba(255, 255, 255, 0.9);
-   background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
-   background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
-   border:1px solid #aaa;
-   -moz-border-radius:3px;
-   -webkit-border-radius:3px;
-   -moz-box-shadow:0 0 3px #aaa;
-   -webkit-box-shadow:0 0 3px #aaa;
-   padding:8px 10px 8px 10px;
-}
-
-input:focus {
-   border-color:#093c75;
-   -moz-box-shadow:0 0 3px #0459b7;
-   -webkit-box-shadow:0 0 3px #0459b7;
-   outline:none;
-}
-
 .button {
    background: url(../images/register-button.png) no-repeat 0 0;
    height: 37px; width: 108px;
