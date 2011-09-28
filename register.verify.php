@@ -3,7 +3,6 @@ include('include/header.php');
 include_once('register.helpers.php');
 ?>
 
-
 <?php 
 if (!isset($_GET['email']) || !isset($_GET['code']))
    $message = array('type' => 'error', 'message' => 'Not a properly encoded verification link.');   

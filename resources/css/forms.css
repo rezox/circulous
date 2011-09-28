@@ -1,8 +1,8 @@
 div#formholder {
 	width: 400px;
 	margin: 30px auto;
-	background: #f4f4f4;
-	border: 5px solid #ddd;
+	background: #e6e6e6;
+	border: 1px solid #bbb;
 	padding: 10px 30px;
 }
 /* Unordered list that holds form inputs */
