@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="resources/img/ios-icon.png" />
    <link rel="stylesheet" href="resources/css/reset.css" type="text/css" />
    <link rel="stylesheet" href="resources/css/default.css" type="text/css" />
 	<link rel="stylesheet" href="resources/css/notifications.css" type="text/css" />
