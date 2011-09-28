@@ -24,10 +24,10 @@
 <form id="emailForm" action="email-check.php" method="post">
    <table border="0">
    <tr>
-      <td>
+      <td valign="top">
          <input type="text" name="email" id="email" style="width: 350px;"/>
       </td>
-      <td>
+      <td class="button_col" valign="top">
          <button type="submit" class="button"></button>
       </td>
    </tr>
