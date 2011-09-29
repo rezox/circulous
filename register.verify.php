@@ -9,13 +9,13 @@ if (!isset($_GET['email']) || !isset($_GET['code']))
 else
 {
    $response = db_query('SELECT COUNT(*) FROM users WHERE email="%s" AND verified="0"', $_GET['email']);
-   if ($response['COUNT(*)'] !== 1)
-      header('Location: login.php?verified');
+   if ($response[0]['COUNT(*)'] !== '1')
+      header('Location: login.php?verify_error');
    else
    {
       if (generate_token($_GET['email']) == $_GET['code'])
       {
-         db_query('UPDATE users WHERE email="%s" SET verified="1"', $_GET['email']);
+         db_query('UPDATE users SET verified="1" WHERE email="%s" LIMIT 1', $_GET['email']);
          header('Location: login.php?verified');
       }
       else

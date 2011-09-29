@@ -2,7 +2,24 @@
 include_once('include/config.php');
 include_once('register.helpers.php');
 
+function check_email($email) {
+	if (filter_var($email, FILTER_VALIDATE_EMAIL)) return true;
+	else return false;
+}
 
+function domain_exists($email, $record = 'MX')
+{
+   list($user, $domain) = preg_split('/@/', $email);
+   return checkdnsrr($domain, $record);
+}
+
+function check_extension($email, $extension = 'edu')
+{
+   if (end(explode(".", $email)) !== $extension)
+      return false;
+
+   return true;
+}
 
 $email = $_POST['email'];
 
