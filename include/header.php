@@ -13,7 +13,7 @@
 	<script src="resources/js/jquery.watermark.min.js"></script>
 	<script src="resources/js/jquery.form.js"></script>
 
-	<title>circulo.us - a new way to look for textbooks.</title>
+	<title>circulo.us - A new way to look for textbooks.</title>
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
 	<meta name="keywords" content="circulous textbooks" />
 	<meta name="description" content="Circulo.us finds you textbooks fast, securely and for cheap within your school." />
