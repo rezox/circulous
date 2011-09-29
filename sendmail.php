@@ -6,6 +6,8 @@
 	<div style="font-family: Lato; font-size: 16pt;">A new way to look for books.</div>
 </div>
 
+<!-- sjlu owns this domain, for sendgrid verification -->
+
 <?php send_email_verification('tacticalazn@gmail.com'); ?>
 
 <?php include 'include/footer.php'; ?>
