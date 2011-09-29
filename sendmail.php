@@ -8,4 +8,4 @@
 
 <?php send_email_verification('tacticalazn@gmail.com'); ?>
 
-<?php include 'include/fooder.php'; ?>
+<?php include 'include/footer.php'; ?>
