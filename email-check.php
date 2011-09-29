@@ -21,7 +21,7 @@ function check_extension($email, $extension = 'edu')
    return true;
 }
 
-$email = $_POST['email'];
+$email = strtolower($_POST['email']);
 
 $response = array('type' => '', 'message' => '', 'email' => '');
 
