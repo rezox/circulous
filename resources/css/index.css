@@ -1,10 +1,12 @@
+@import url(jquery.login.css);
+
 .phrase
 {
    color: #000; text-shadow: 0 1px 1px #fff;
    font-family: 'Lato'; font-size: 22px; letter-spacing: 0.03em; line-height: 36px;
 }
 
-form {
+#form form {
    border: 0px;
    padding:20px;
    width:560px;
@@ -40,7 +42,7 @@ form {
 }
 
 
-input 
+#form input 
 {
    font: normal 18px/100% Helvetica;
    letter-spacing: 0.1em;
@@ -55,7 +57,7 @@ input
    padding:8px 10px 7px 10px;
 }
 
-input:focus {
+#form input:focus {
    border-color:#093c75;
    -moz-box-shadow:0 0 3px #0459b7;
    -webkit-box-shadow:0 0 3px #0459b7;
