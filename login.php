@@ -27,13 +27,18 @@ else if (isset($_GET['verify_error']))
 
 if (isset($_POST['email']) && isset($_POST['password']))
 {
+	$_POST['email'] = strtolower($_POST['email']);
 	$login = verify_login($_POST['email'], $_POST['password']);
 	if ($login == -1)
 		$msg = array('type' => 'error', 'text' => 'No such account or the account has not been verified yet.');
 	else if ($login == 0)
 		$msg = array('type' => 'error', 'text' => 'Email/password mismatch.');
 	else
+	{
+		session_start();
+		session_register($_POST['email']);
 		header('Location: index.php');
+	}
 }
 ?>
 
