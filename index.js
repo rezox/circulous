@@ -28,7 +28,7 @@ function processEmail(response)
 		$('#form').fadeTo('normal', 0, function()
 		{
 			$('#message').fadeTo('normal', 1);
-			$('#form').html('<form id="register" class="form" action="register.create.php" method="post"><table border="0"><tr><td><input type="hidden" name="email" value="'+response.email+'" /><input type="password" id="pw" name="pw" style="width: 165px;" /><input type="password" id="confirm" name="confirm" style="width: 165px;" /></td><td class="button_col" valign="top"><button type="submit" class="button"></button></td></tr></table></form>').fadeTo('normal', 1);
+			$('#form').html('<form id="register" class="form" action="register.create.php" method="post"><table border="0"><tr><td><input type="hidden" name="email" value="'+response.email+'" /><input type="password" id="pw" name="pw" style="width: 165px; margin-right: 3px;" /><input type="password" id="confirm" name="confirm" style="width: 165px;" /></td><td class="button_col" valign="top"><button type="submit" class="button"></button></td></tr></table></form>').fadeTo('normal', 1);
 		
 			$(this).ready(function() {
 				$("#pw").watermark("password");
