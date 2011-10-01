@@ -17,6 +17,7 @@ else
 	//TODO: Write any responses that are bad to output.
 
 	send_email_verification($_POST['email']); // we send email out when we've added it to our database.
+   $_SESSION['has_registered'] = 1;
 
 	$response['type'] = 'success';
 	$response['message'] = 'All good to go! Check your email for the verification link!';

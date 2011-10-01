@@ -3,6 +3,8 @@
 <?php 
 if (isset($_SESSION['user']))
 	header('Location: home.php');
+else if (isset($_SESSION['has_registered']) && $_SESSION['has_registered'] == 1)
+   header('Location: login.php');
 ?>
 
 <div style="margin: 20px auto 0 auto; width: 237px;">

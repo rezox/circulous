@@ -31,6 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	else
 	{
 		$_SESSION['user'] = $_POST['email'];
+      $_SESSION['has_registered'] = 1;
 		header('Location: index.php');
 	}
 }
