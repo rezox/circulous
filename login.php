@@ -35,8 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 		$msg = array('type' => 'error', 'text' => 'Email/password mismatch.');
 	else
 	{
-		session_start();
-		session_register($_POST['email']);
+		$_SESSION['user'] = $_POST['email'];
 		header('Location: index.php');
 	}
 }
@@ -48,26 +47,10 @@ if (isset($_POST['email']) && isset($_POST['password']))
    </p>
 </div>
 
-<div id="formholder">
-	<form action="login.php?process" method="POST">
-		<ul class="formul">
-			<li>
-				<span class="intyp">
-					Email
-				</span>
-				<input type="text" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"/>
-			</li>
-			<li>
-				<span class="intyp">
-					Password
-				</span>
-				<input type="password" name="password" />
-			</li>
-			<li>
-				<input type="submit" name="submit" value="Login" />
-			</li>
-		</ul>
-	</form>
-</div>
+<form class="form" action="login.php?process" method="POST">
+	<input type="text" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"/>
+	<input type="password" name="password" />
+	<input type="submit" name="submit" value="Login" />
+</form>
 
-<?php include 'include/fooder.php'; ?>
+<?php include 'include/footer.php'; ?>

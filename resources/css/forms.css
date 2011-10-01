@@ -1,210 +1,41 @@
-div#formholder {
-	width: 400px;
-	margin: 30px auto;
-	border: 1px solid #bbb;
-	padding: 10px 30px;
-background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera11.10+ */
-background: -ms-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-background: linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+.form input 
+{
+   font: normal 18px/100% Helvetica;
+   letter-spacing: 0.1em;
+   background: rgba(255, 255, 255, 0.9);
+   background:-moz-linear-gradient(90deg, #fff, #eee); /* Firefox */
+   background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+   border:1px solid #aaa;
+   -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+   -moz-box-shadow:0 0 3px #aaa;
+   -webkit-box-shadow:0 0 3px #aaa;
+   padding:8px 10px 7px 10px;
 }
-/* Unordered list that holds form inputs */
-ul.formul {
-	list-style-type: none;
+
+.form input:focus {
+   border-color:#093c75;
+   -moz-box-shadow:0 0 3px #0459b7;
+   -webkit-box-shadow:0 0 3px #0459b7;
+   outline:none;
 }
-ul.formul li {
-	height: 34px;
-	clear: both;
-	padding: 10px 0;
+
+.button_col
+{
+   padding-top: 1px;
+   padding-left: 4px;
 }
-/* Form label */
-ul.formul li span.intyp {
-	font: bold 14px 'Helvetica', sans-serif;
-	color: #e0e0e0;
-	line-height: 35px;
-	text-align: center;
-	text-shadow: 0 1px 0 #111;
-	float: left;
-	display: block;
-	border: 1px solid #111;
-	border-right: none;
-	height: 34px;
-	width: 100px;
-	position: relative;
-	z-index: 10;
-	-webkit-border-radius: 4px 0 0 4px;
-	-moz-border-radius: 4px 0 0 4px;
-	-o-border-radius: 4px 0 0 4px;
-	-ms-border-radius: 4px 0 0 4px;
-	-khtml-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
-	background: rgb(81,81,81);
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(62,62,62)), color-stop(100%, rgb(81,81,81)));
-	background: -webkit-linear-gradient(left, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -moz-linear-gradient(left, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -o-linear-gradient(left, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -ms-linear-gradient(left, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: linear-gradient(left, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
+
+.button {
+   background: url(../img/register-button.png) no-repeat 0 0;
+   height: 37px; width: 108px;
+   border: 0px;
 }
-ul.formul li span.intyp:before {
-	position: absolute;
-	border-color: transparent transparent transparent #222;
-	border-style: solid;
-	border-width: 18px;
-	width: 0;
-	height: 0;
-	right: -36px;
-	top: -1px;
+
+.button:hover {
+   background-position: 0 -37px;
 }
-ul.formul li span.intyp:after {
-	position: absolute;
-	border-color: transparent transparent transparent #515151;
-	border-style: solid;
-	border-width: 17px;
-	width: 0;
-	height: 0;
-	right: -34px;
-	top: 0px;
-}
-/* Input elements */
-ul.formul li input[type=text], ul.formul li input[type=password], ul.formul li textarea {
-	float: left;
-	width: 259px;
-	height: 34px;
-	padding: 0 10px 0 10px;
-	margin: 0;
-	background: #FFF;
-	border: 1px solid #dadada;
-	-webkit-border-radius: 0 4px 4px 0;
-	-moz-border-radius: 0 4px 4px 0;
-	-o-border-radius: 0 4px 4px 0;
-	-ms-border-radius: 0 4px 4px 0;
-	-khtml-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
-	color: #555;
-	font: normal 14px Helvetica, sans-serif;
-	-webkit-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	-moz-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	box-shadow: inset 0 0 4px 4px #f4f4f4;
-	line-height: 34px;
-}
-ul.formul li textarea {
-	height: 150px;
-	overflow: auto;
-	-webkit-resize: none;
-	-moz-resize: none;
-	resize: none;
-	padding: 10px 10px 10px 28px;
-	font: normal 14px Helvetica, sans-serif;
-}
-ul.formul li input[type=text]:focus, ul.formul li input[type=password]:focus, ul.formul li textarea:focus {
-	outline: 0;
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1), inset 0 0 4px 4px #f4f4f4;
-	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.1), inset 0 0 4px 4px #f4f4f4;
-	box-shadow: 0 0 5px rgba(0,0,0,0.1), inset 0 0 4px 4px #f4f4f4;
-}
-/* Select dropdown */
-ul.formul li select {
-	float: left;
-	width: 299px;
-	height: 36px;
-	padding: 5px 5px 5px 10px;
-	margin: 0;
-	background: #FFF;
-	border: 1px solid #dadada;
-	-webkit-border-radius: 0 4px 4px 0;
-	-moz-border-radius: 0 4px 4px 0;
-	-o-border-radius: 0 4px 4px 0;
-	-ms-border-radius: 0 4px 4px 0;
-	-khtml-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
-	color: #555;
-	font: normal 14px Helvetica, sans-serif;
-	-webkit-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	-moz-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	box-shadow: inset 0 0 4px 4px #f4f4f4;
-	-webkit-appearance: none;
-}
-ul.formul li select:focus {
-	outline: none;
-}
-/* Checkboxes and radio buttons */
-ul.formul li div.choose {
-	float: left;
-	width: 257px;
-	padding: 10px 10px 10px 15px;
-	margin: 0;
-	background: #FFF;
-	border: 1px solid #dadada;
-	-webkit-border-radius: 0 4px 4px 0;
-	-moz-border-radius: 0 4px 4px 0;
-	-o-border-radius: 0 4px 4px 0;
-	-ms-border-radius: 0 4px 4px 0;
-	-khtml-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
-	color: #555;
-	font: normal 14px Helvetica, sans-serif;
-	-webkit-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	-moz-box-shadow: inset 0 0 4px 4px #f4f4f4;
-	box-shadow: inset 0 0 4px 4px #f4f4f4;
-	position: relative;
-}
-#foo:checked::before, input[type="checkbox"], #foo:checked::before, input[type="radio"] {
-	position: absolute;
-	clip: rect(0,0,0,0);
-	clip: rect(0 0 0 0);
-}
-#foo:checked, input[type="checkbox"] + label::before, #foo:checked, input[type="radio"] + label::before {
-	content: url('../img/forms/unchecked.png');
-	position: relative;
-	top: 2px;
-	margin-right: 5px;
-}
-input[type="checkbox"]:checked + label::before, input[type="radio"]:checked + label::before {
-	content: url('../img/forms/checked_dark.png');
-}
-/* Submit button */
-ul.formul li input[type=submit] {
-	display: block;
-	float: right;
-	width: 100px;
-	height: 34px;
-	border: 1px solid #111;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-o-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	border-radius: 4px;
-	font: 14px 'Helvetica', sans-serif;
-	color: #e0e0e0;
-	line-height: 31px;
-	text-align: center;
-	text-shadow: 0 1px 0 #111;
-	text-decoration: none;
-	background: rgb(81,81,81);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(81,81,81)), color-stop(100%, rgb(62,62,62)));
-	background: -webkit-linear-gradient(top, rgb(81,81,81) 0%, rgb(62,62,62) 100%);
-	background: -moz-linear-gradient(top, rgb(81,81,81) 0%, rgb(62,62,62) 100%);
-	background: -o-linear-gradient(top, rgb(81,81,81) 0%, rgb(62,62,62) 100%);
-	background: -ms-linear-gradient(top, rgb(81,81,81) 0%, rgb(62,62,62) 100%);
-	background: linear-gradient(top, rgb(81,81,81) 0%, rgb(62,62,62) 100%);
-}
-ul.formul li input[type=submit]:hover {
-	background: rgb(62,62,62);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(62,62,62)), color-stop(100%, rgb(81,81,81)));
-	background: -webkit-linear-gradient(top, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -moz-linear-gradient(top, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -o-linear-gradient(top, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: -ms-linear-gradient(top, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-	background: linear-gradient(top, rgb(62,62,62) 0%, rgb(81,81,81) 100%);
-}
-ul.formul li input[type=submit]:active, ul.formul li input[type=submit]:focus {
-	-webkit-box-shadow: inset 0 0 4px 4px rgba(0,0,0,0.3);
-	-moz-box-shadow: inset 0 0 4px 4px rgba(0,0,0,0.3);
-	box-shadow: inset 0 0 4px 4px rgba(0,0,0,0.3);
+
+.button:active, .button:focus {
+   background-position: 0 -74px;
 }

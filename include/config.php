@@ -29,4 +29,6 @@ include 'database.php';
 db_connect();
 
 ini_set('display_errors', 'Off');
+
+session_start();
 ?>

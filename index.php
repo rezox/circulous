@@ -1,4 +1,10 @@
 <?php include 'include/header.php'; ?>
+
+<?php 
+if (isset($_SESSION['user']))
+	header('Location: home.php');
+?>
+
 <div style="margin: 20px auto 0 auto; width: 237px;">
    <img src="resources/img/logo.png" border="0" />
 </div>
@@ -20,8 +26,8 @@
    </div>
 </div>
 
-<div id="form" style="margin: -10px auto 0 auto; width: 520px;"> 
-<form id="emailForm" action="email-check.php" method="post">
+<div id="form" style="margin: 10px auto 20px auto; width: 480px;"> 
+<form class="form" id="reg_email" action="email-check.php" method="post">
    <table border="0">
    <tr>
       <td valign="top">
@@ -32,6 +38,23 @@
       </td>
    </tr>
    </table>
+</form>
+</div>
+
+<div id="form_next" style="display: none;">
+<form id="reg_password" class="form" action="register.create.php" method="post">
+	<table border="0">
+		<tr>
+			<td>
+				<input type="hidden" id="email" name="email" value="" />
+				<input type="password" id="pw" name="pw" style="width: 160px;" />
+				<input type="password" id="confirm" name="confirm" style="width: 160px;" />
+			</td>
+			<td class="button_col" valign="top">
+				<button type="submit" class="button"></button>
+			</td>
+		</tr>
+	</table>
 </form>
 </div>
 
