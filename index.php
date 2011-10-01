@@ -66,7 +66,7 @@ else if (isset($_SESSION['has_registered']) && $_SESSION['has_registered'] == 1)
 
 <div style="margin: -70px auto 0 auto; width: 750px;">
    <div class="infobox" style="position: absolute;">
-      <img src="resources/img/mailsr.png" valign="top" style="margin-right: 15px;" /><b>A simple way to find the books you need.</b><br />
+      <img src="resources/img/mailsr.png" valign="top" style="margin-right: 15px;" /><b>A simple way to find books.</b><br />
       <div style="margin: 3px 0 0 32px;">Circulous asks for you .edu email address so it can find people at your school who are also looking to buy and sell. The result? A simple and effective way to match you with someone else on campus for a book exchange. Nice.</div>
    </div>
 
