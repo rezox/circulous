@@ -54,8 +54,8 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	      <table border="0">
 		      <tr>
 			      <td valign="top">
-				      <input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" style="width: 200px;"/>
-				      <input type="password" id="password" name="password" style="width: 200px;" />
+				      <input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" style="width: 250px;"/>
+				      <input type="password" id="password" name="password" style="width: 150px;" />
 			      </td>
 			      <td class="button_col" valign="top">
 				      <button type="submit" class="button"></button>
