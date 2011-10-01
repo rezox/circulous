@@ -47,10 +47,18 @@ if (isset($_POST['email']) && isset($_POST['password']))
    </p>
 </div>
 
-<form class="form" action="login.php?process" method="POST">
-	<input type="text" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"/>
-	<input type="password" name="password" />
-	<input type="submit" name="submit" value="Login" />
+<form class="form" action="login.php?process" method="POST" style="width: 560px; margin: 40px auto;">
+	<table border="0">
+		<tr>
+			<td valign="top">
+				<input type="text" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" style="width: 200px;"/>
+				<input type="password" id="password" name="password" style="width: 200px;" />
+			</td>
+			<td class="button_col" valign="top">
+				<button type="submit" class="button"></button>
+			</td>
+		</tr>
+	</table>
 </form>
 
 <?php include 'include/footer.php'; ?>
