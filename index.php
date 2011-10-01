@@ -8,7 +8,7 @@ else if (isset($_SESSION['has_registered']) && $_SESSION['has_registered'] == 1)
 ?>
 
 <div style="width: 650px; text-align: right; margin: 10px auto -20px auto;">
-   Have an account? <a href="login.php"><b>Login</b></a>.
+   Have an account? <a href="login.php"><b>Login</b></a>
 </div>
 
 <div style="margin: 20px auto 0 auto; width: 237px;">
