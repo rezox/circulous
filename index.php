@@ -68,7 +68,7 @@ if (isset($_SESSION['user']))
       <div style="margin: 3px 0 0 32px;">Circulous asks for you .edu email address so it can find people at your school who are also looking to buy and sell. The result? A simple and effective way to match you with someone else on campus for a book exchange. Nice.</div>
    </div>
 
-   <div class="infobox" style="position: absolute; margin-top: 135px;">
+   <div class="infobox" style="position: absolute; margin-top: 135px; padding-bottom: 20px;">
       <img src="resources/img/check.png" valign="top" style="margin-right: 15px" /><b>Safer.</b><br />
       <div style="margin: 3px 0 0 32px;">Because you're dealing with students in your school, you can perform an exchange on your campus; avoiding middle-man shipping and payment gateways, and perform inspections before you buy.</div>
    </div>
