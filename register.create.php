@@ -3,7 +3,6 @@ include_once('include/config.php');
 include_once('register.helpers.php');
 
 $response = array('type' => '', 'message' => '');
-$_POST['email'] = strtolower($_POST['email']);
 
 if ($_POST['pw'] !== $_POST['confirm'] || is_null($_POST['email'])) // sanity check
 {
@@ -12,6 +11,7 @@ if ($_POST['pw'] !== $_POST['confirm'] || is_null($_POST['email'])) // sanity ch
 }
 else
 {
+   $_POST['email'] = strtolower($_POST['email']);
    // this is done reversely -- password can decrypt string which must match our blowfish_secret
 	db_query('INSERT INTO users (email, password, verified) VALUES ("%s", AES_ENCRYPT("%s", "%s"), "%s")', $_POST['email'], BLOWFISH_SECRET, $_POST['pw'], 0);
 	//TODO: Write any responses that are bad to output.
