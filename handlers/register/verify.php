@@ -1,9 +1,4 @@
 <?php
-include('include/header.php');
-include_once('register.helpers.php');
-?>
-
-<?php 
 if (!isset($_GET['email']) || !isset($_GET['code']))
    header('Location: login.php?verify_error');
 else
@@ -23,5 +18,3 @@ else
    }
 }
 ?>
-
-<?php include('include/footer.php'); ?>

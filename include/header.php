@@ -1,5 +1,9 @@
-<?php include_once('config.php'); ?>
-<?php include_once('helpers.php'); ?>
+<?php 
+	$info = pathinfo($_SERVER['PHP_SELF']);
+	$filename = basename($_SERVER['PHP_SELF'], '.' . $info['extension']);
+	
+	include_once('config.php'); 
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,8 +21,12 @@
 	<meta name="keywords" content="circulous textbooks" />
 	<meta name="description" content="Circulo.us finds you textbooks fast, securely and for cheap within your school." />
 
-	<script src="resources/js/<?php $info = pathinfo($_SERVER['PHP_SELF']); $filename = basename($_SERVER['PHP_SELF'], '.' . $info['extension']); echo $filename . '.js'; ?>"></script>
-	<link rel="stylesheet" href="resources/css/<?php $info = pathinfo($_SERVER['PHP_SELF']); $filename = basename($_SERVER['PHP_SELF'], '.' . $info['extension']); echo $filename . '.css'; ?>" />
+   <? if (file_exists('resources/js/' . $filename . '.js')): ?>
+	   <script src="resources/js/<?= $filename ?>.js"></script>
+   <? endif ?>
+   <? if (file_exists('resources/css/' . $filename . '.css')): ?>
+	   <link rel="stylesheet" href="resources/css/<?= $filename ?>.css" />
+   <? endif ?>
 </head>
 
 <body>

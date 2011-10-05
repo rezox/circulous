@@ -1,4 +1,23 @@
 <?php
+function check_email($email) {
+	if (filter_var($email, FILTER_VALIDATE_EMAIL)) return true;
+	else return false;
+}
+
+function domain_exists($email, $record = 'MX')
+{
+   list($user, $domain) = preg_split('/@/', $email);
+   return checkdnsrr($domain, $record);
+}
+
+function check_extension($email, $extension = 'edu')
+{
+   if (end(explode(".", $email)) !== $extension)
+      return false;
+
+   return true;
+}
+
 function check_exists($email)
 {
 	$result = db_query("SELECT verified FROM users WHERE email='%s'", $email);
@@ -31,7 +50,7 @@ function send_email_verification($email)
    $body .= "we need to verify that you're email works.\n";
    $body .= "\n";
    $body .= "To do so, please visit the following link.\n";
-   $body .= "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . "/register.verify.php?email=" . $email . "&code=" . generate_token($email);
+   $body .= "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . "/register.php?verify&email=" . $email . "&code=" . generate_token($email);
 
    $mail->IsSMTP();
    $mail->Body = $body;

@@ -33,7 +33,7 @@ else if (isset($_SESSION['has_registered']) && $_SESSION['has_registered'] == 1)
 </div>
 
 <div id="form" style="margin: 10px auto 20px auto; width: 480px;"> 
-<form class="form" id="reg_email" action="email-check.php" method="post">
+<form class="form" id="reg_email" action="register.php?check-email" method="post">
    <table border="0">
    <tr>
       <td valign="top">
@@ -48,7 +48,7 @@ else if (isset($_SESSION['has_registered']) && $_SESSION['has_registered'] == 1)
 </div>
 
 <div id="form_next" style="display: none;">
-<form id="reg_password" class="form" action="register.create.php" method="post">
+<form id="reg_password" class="form" action="register.php?create" method="post">
 	<table border="0">
 		<tr>
 			<td>

@@ -1,7 +1,4 @@
 <?php
-include_once('include/config.php');
-include_once('register.helpers.php');
-
 $response = array('type' => '', 'message' => '');
 
 if ($_POST['pw'] !== $_POST['confirm'] || is_null($_POST['email'])) // sanity check
